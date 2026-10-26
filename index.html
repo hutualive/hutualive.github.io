@@ -3,60 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>abracadabra</title>
+    <title>kibuff — Embedded AI for intelligent appliances</title>
+    <meta name="description" content="kibuff builds device-agent LLMs under 150M parameters, compact ASR and TTS, and unified multimodal models for deeply embedded appliances and MCU targets.">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
-<body>
+<body class="site-page home-page">
     <header>
-        <nav>
-            <div class="logo"><img src="logo.png" alt="kibuff logo"><span class="slogan">advancing the magics</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">home</a></li>
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="kibuff home"><img src="logo.png" alt="kibuff" width="300" height="128"><span class="slogan">advancing the magics</span></a>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="index.html" class="active" aria-current="page">home</a></li>
                 <li><a href="product.html">product</a></li>
-                <li><a href="update.html">update</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="mailto:dp@kibuff.com" class="nav-contact">contact us <span aria-hidden="true">↗</span></a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+            <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div id="token-cloud"></div>
-            <div id="neural-network"></div>
-            <div class="hero-content">
-                <h1>Transforming the Future</h1>
-                <p>cutting-edge solutions for your challenges</p>
-                <a href="product.html" class="cta-button">Explore Our Product</a>
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <p class="hero-eyebrow"><span aria-hidden="true"></span> AI for appliances</p>
+                    <h1 id="hero-heading">Big intelligence.<br><span>Small footprint.</span></h1>
+                    <p class="hero-description">We build compact language, speech, and multimodal models for deeply embedded devices. Give appliances the ability to listen, see, think, talk, and act.</p>
+                    <div class="hero-actions">
+                        <a href="product.html" class="hero-primary">explore our models <span aria-hidden="true">↗</span></a>
+                        <a href="mailto:dp@kibuff.com" class="hero-secondary">contact us <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="hero-industries">
+                        <p>Built for intelligence on the device</p>
+                        <ul aria-label="Technology focus">
+                            <li>Device agents &lt;150M</li>
+                            <li>ASR &amp; TTS</li>
+                            <li>MCU targets</li>
+                        </ul>
+                    </div>
+                </div>
+                <figure class="hero-visual">
+                    <div class="model-canvas">
+                        <div class="model-topline"><span class="model-wordmark">AI inside the appliance</span><span class="model-label">embedded intelligence</span></div>
+                        <div class="device-diagram" role="img" aria-label="Listen and see feed a device agent that thinks, talks, and acts. Device-agent language models have fewer than 150 million parameters.">
+                            <div class="modality-row" aria-hidden="true"><span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="12" y="4" width="8" height="15" rx="4"/><path d="M8 14V16A8 8 0 0 0 24 16V14M16 24V28M11 28H21"/></svg>listen</span><span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><path d="M3 16S8 7 16 7S29 16 29 16S24 25 16 25S3 16 3 16Z"/><circle cx="16" cy="16" r="4"/></svg>see</span></div>
+                            <div class="device-core" aria-hidden="true"><span class="core-eyebrow">think</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><rect x="8" y="8" width="16" height="16" rx="3"/><path d="M12 3V8M20 3V8M12 24V29M20 24V29M3 12H8M3 20H8M24 12H29M24 20H29"/><path d="M13 13H19V19H13Z"/></svg><strong>device agent</strong><span class="core-detail">&lt;150M parameters</span></div>
+                            <div class="modality-row" aria-hidden="true"><span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><path d="M5 12H10L17 6V26L10 20H5ZM22 11Q28 16 22 21M25 6Q35 16 25 26"/></svg>talk</span><span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false"><path d="M17 3L7 18H15L13 29L25 13H17Z"/></svg>act</span></div>
+                        </div>
+                        <div class="model-process"><span>Language</span><span>Speech</span><span>Multimodal</span></div>
+                    </div>
+                    <figcaption>Compact models for deeply embedded devices. <span>Concept illustration.</span></figcaption>
+                </figure>
             </div>
         </section>
 
-        <section class="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>At kibuff, we're pioneering the next generation of artificial intelligence technologies. Our team of experts combines deep learning, natural language processing, and computer vision to create innovative solutions that drive business value.</p>
-                        <p>Founded in 2023, we're on a mission to make AI accessible, ethical, and transformative for businesses of all sizes.</p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>10+</h3>
-                            <p>research scientist</p>
-                        </div>
-                        <div class="stat">
-                            <h3>1</h3>
-                            <p>flagship product</p>
-                        </div>
-                        <div class="stat">
-                            <h3>100%</h3>
-                            <p>client satisfaction</p>
-                        </div>
-                    </div>
+        <section class="ai-section" aria-labelledby="ai-heading">
+            <div class="ai-section-inner">
+                <div class="ai-section-copy">
+                    <p class="section-eyebrow">large-model capability. embedded scale.</p>
+                    <h2 id="ai-heading">More intelligence.<br>Closer to the device.</h2>
+                    <p>We're bringing the capabilities of large models to the hardware inside everyday appliances. Our work combines compact device agents, speech models, and unified multimodal training, with deployment on deeply embedded targets such as microcontrollers in mind.</p>
+                    <a href="about.html" class="text-link">meet kibuff <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="network-visual" data-network-animation>
+                    <div class="network-heading"><span>small models, connected capabilities</span><button type="button" class="animation-toggle" hidden>pause animation</button></div>
+                    <svg class="network-art" viewBox="0 0 550 320" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <g class="network-connections"><path d="M65 45L205 45"/><path d="M65 45L205 91"/><path d="M65 45L205 137"/><path d="M65 121.667L205 137"/><path d="M65 121.667L205 91"/><path d="M65 121.667L205 183"/><path d="M65 198.333L205 183"/><path d="M65 198.333L205 229"/><path d="M65 198.333L205 137"/><path d="M65 275L205 275"/><path d="M65 275L205 229"/><path d="M65 275L205 183"/><path d="M205 45L345 45"/><path d="M205 45L345 91"/><path d="M205 45L345 137"/><path d="M205 91L345 91"/><path d="M205 91L345 45"/><path d="M205 91L345 137"/><path d="M205 137L345 137"/><path d="M205 137L345 91"/><path d="M205 137L345 183"/><path d="M205 183L345 183"/><path d="M205 183L345 137"/><path d="M205 183L345 229"/><path d="M205 229L345 229"/><path d="M205 229L345 183"/><path d="M205 229L345 275"/><path d="M205 275L345 275"/><path d="M205 275L345 229"/><path d="M205 275L345 183"/><path d="M345 45L485 45"/><path d="M345 45L485 121.667"/><path d="M345 45L485 198.333"/><path d="M345 91L485 121.667"/><path d="M345 91L485 45"/><path d="M345 91L485 198.333"/><path d="M345 137L485 121.667"/><path d="M345 137L485 198.333"/><path d="M345 137L485 45"/><path d="M345 183L485 198.333"/><path d="M345 183L485 121.667"/><path d="M345 183L485 275"/><path d="M345 229L485 198.333"/><path d="M345 229L485 275"/><path d="M345 229L485 121.667"/><path d="M345 275L485 275"/><path d="M345 275L485 198.333"/><path d="M345 275L485 121.667"/></g>
+                        <g class="network-signals"><path class="network-pulse" pathLength="200" style="--signal-delay: 0s" d="M65 45L205 91L345 137L485 121.667"/><path class="network-pulse" pathLength="200" style="--signal-delay: -1.3s" d="M65 121.667L205 137L345 183L485 198.333"/><path class="network-pulse" pathLength="200" style="--signal-delay: -2.6s" d="M65 198.333L205 229L345 183L485 121.667"/><path class="network-pulse" pathLength="200" style="--signal-delay: -3.9s" d="M65 275L205 229L345 275L485 275"/></g>
+                        <g class="network-nodes"><circle cx="65" cy="45" r="4"/><circle cx="65" cy="121.667" r="4"/><circle cx="65" cy="198.333" r="4"/><circle cx="65" cy="275" r="4"/><circle cx="205" cy="45" r="4"/><circle cx="205" cy="91" r="4"/><circle cx="205" cy="137" r="4"/><circle cx="205" cy="183" r="4"/><circle cx="205" cy="229" r="4"/><circle cx="205" cy="275" r="4"/><circle cx="345" cy="45" r="4"/><circle cx="345" cy="91" r="4"/><circle cx="345" cy="137" r="4"/><circle cx="345" cy="183" r="4"/><circle cx="345" cy="229" r="4"/><circle cx="345" cy="275" r="4"/><circle cx="485" cy="45" r="4"/><circle cx="485" cy="121.667" r="4"/><circle cx="485" cy="198.333" r="4"/><circle cx="485" cy="275" r="4"/></g>
+                    </svg>
+                    <div class="network-labels" aria-hidden="true"><span>perceive</span><span>think</span><span>respond</span></div>
                 </div>
             </div>
         </section>
@@ -71,19 +90,14 @@
                 </div>
                 <div class="footer-links">
                     <h4>quick links</h4>
-                    <ul>
+                    <ul aria-label="Footer links">
                         <li><a href="index.html">home</a></li>
                         <li><a href="product.html">product</a></li>
-                        <li><a href="update.html">update</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="mailto:dp@kibuff.com">contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>contact us</h4>
-                    <p>email: info@kibuff.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 kibuff</p>
+                <p class="footer-copyright">&copy; <span data-current-year>2026</span> kibuff</p>
             </div>
         </div>
     </footer>
