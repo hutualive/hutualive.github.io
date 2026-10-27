@@ -49,22 +49,13 @@ function initNetworkAnimation() {
     const visual = document.querySelector('[data-network-animation]');
     if (!visual) return;
 
-    const button = visual.querySelector('.animation-toggle');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let inView = false;
-    let pausedByVisitor = false;
 
     function updateAnimation() {
         const canAnimate = !reducedMotion.matches;
-        visual.classList.toggle('is-animating', canAnimate && inView && !document.hidden && !pausedByVisitor);
-        button.hidden = !canAnimate;
-        button.textContent = pausedByVisitor ? 'play animation' : 'pause animation';
+        visual.classList.toggle('is-animating', canAnimate && inView && !document.hidden);
     }
-
-    button.addEventListener('click', function () {
-        pausedByVisitor = !pausedByVisitor;
-        updateAnimation();
-    });
 
     if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver(function (entries) {
